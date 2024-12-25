@@ -5,8 +5,8 @@ class Solution:
         i = 0
         j = len(height)-1
         max_area = 0
-        max_i = i
-        max_j = j
+        # max_i = i
+        # max_j = j
         while(i<j):
             # print("i:", i)
             # print("j:", j)
@@ -20,22 +20,17 @@ class Solution:
             cur_area = (j-i)*min(cur_left, cur_right)
             if cur_area>max_area:
                 max_area = cur_area
-                max_i = i
-                max_j = j
+                # max_i = i
+                # max_j = j
 
             # print("cur_left:", cur_left)
             # print("cur_right:", cur_right)
             # print("cur_area:", cur_area)
 
-
             if height[i]<height[j]:
                 i+=1
             else:
                 j-=1
-
-
-
-
 
             # print("next_i:",i)
             # print("next_j:",j)
